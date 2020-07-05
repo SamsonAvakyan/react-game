@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+
 import { addCells } from '../actions'
 import App from '../../components/App'
 

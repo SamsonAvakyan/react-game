@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.row-cells {
+.cells__row {
   display: flex;
   margin: 0 auto;
 }

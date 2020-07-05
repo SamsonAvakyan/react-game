@@ -2,10 +2,10 @@ import React from 'react'
 
 import './style.css'
 
-const Cell = ({ num }) => {
+const Cell = ({ num, visibilityCell, isActive }) => {
   return (
-    <div className="cell">
-      <span className="cell__num">{num}</span>
+    <div className="row__cell cell" onClick={visibilityCell}>
+      <span className={'cell__num ' + isActive}>{num}</span>
     </div>
   )
 }

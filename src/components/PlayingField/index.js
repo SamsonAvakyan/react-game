@@ -4,14 +4,20 @@ import Cell from '../Cell'
 
 import './style.css'
 
-const PlayingField = ({ cells }) => {
+const PlayingField = ({ cells, visibilityCell }) => {
 
   return (
     <section className="cells">
       {cells.map((item, index) => (
-        <div className="row-cells" key={index}>
-          {item.map((num, index) => (
-            <Cell key={index} num={num} />
+        <div className="cells__row row" key={index}>
+          {item.map((item, index) => (
+            <Cell
+              id={item.id}
+              key={index}
+              num={item.num}
+              visibilityCell={() => visibilityCell(item.id)}
+              isActive={item.isVisibility ? 'cell__num_visibility' : ''}
+            />
           ))}
         </div>
       ))}

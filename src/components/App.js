@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Button from '@material-ui/core/Button'
 
-import PlayingField from './PlayingField'
+import Button from '@material-ui/core/Button'
+import PlayingField from '../redux/containers/PlayingField'
 
 const App = ({ addCells, cells }) => {
   const [value, setValue] = useState('')

@@ -10,7 +10,6 @@ export const visibilityCell = (id) => ({
   id,
 })
 
-export const paintCell = (id) => ({
+export const paintCell = () => ({
   type: PAINT_CELL,
-  id,
 })

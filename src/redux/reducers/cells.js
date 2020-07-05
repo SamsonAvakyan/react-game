@@ -24,7 +24,15 @@ const cells = (state = [], action = addCells) => {
       )
 
     case PAINT_CELL:
-      return state.filter((todo) => todo.id !== action.id)
+      return state.map((item) =>
+        item.map((item, index, array) =>
+          item.num == 1 &&
+          (array[index < array.length - 1 ? index + 1 : index - 1].num == 1 ||
+            array[index ? index - 1 : index + 1].num == 1)
+            ? { ...item, isPainted: !item.isPainted }
+            : item
+        )
+      )
     default:
       return state
   }

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import { addCells } from '../actions'
+import { addCells, paintCell } from '../actions'
 import App from '../../components/App'
 
 const mapStateToProps = (state = []) => ({
@@ -9,6 +9,7 @@ const mapStateToProps = (state = []) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   addCells: (dimensions) => dispatch(addCells(dimensions)),
+  paintCell: () => dispatch(paintCell()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import Button from '@material-ui/core/Button'
 import PlayingField from '../redux/containers/PlayingField'
 
-const App = ({ addCells, cells }) => {
-  const [value, setValue] = useState('')
+const App = ({ addCells, paintCell, cells }) => {
+  const [value, setValue] = useState('3')
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -21,19 +21,19 @@ const App = ({ addCells, cells }) => {
       <header className="header">
         <span className="size">Размерность матрицы</span>
         <input
-          className="input"
           type="number"
           min={3}
           max={9}
           onChange={(e) => setValue(e.target.value)}
           value={value}
           required
-          pattern="[0-9]{1}"
         />
         <Button variant="contained" onClick={handleSubmit} type="submit">
           Создать
         </Button>
-        <Button variant="contained">Закрасить</Button>
+        <Button variant="contained" onClick={() => paintCell()}>
+          Закрасить
+        </Button>
       </header>
 
       <PlayingField count={value} cells={cells} />

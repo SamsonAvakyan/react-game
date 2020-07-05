@@ -16,7 +16,8 @@ const PlayingField = ({ cells, visibilityCell }) => {
               key={index}
               num={item.num}
               visibilityCell={() => visibilityCell(item.id)}
-              isActive={item.isVisibility ? 'cell__num_visibility' : ''}
+              isActive={item.isVisibility ? 'cell_visibility' : ''}
+              isPainted={item.isPainted ? 'cell_painted' : ''}
             />
           ))}
         </div>

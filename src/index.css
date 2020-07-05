@@ -1,0 +1,24 @@
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+.container {
+  width: 500em;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5em;
+}
+
+.size {
+  font-size: 20px;
+
+  margin: auto 0;
+}
+
+.input {
+  width: 10em;
+}

@@ -1,0 +1,15 @@
+.cell {
+  width: 5em;
+  height: 5em;
+  background-color: rgb(232, 232, 232);
+  border: 1px solid rgb(190, 190, 190);
+  flex-basis: content;
+}
+
+.cell__num {
+  opacity: 0;
+}
+
+.cell__num_visibility {
+  opacity: 1;
+}

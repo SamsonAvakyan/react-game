@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3vh;
+  width: 60vw;
+  margin: 0 auto 5vh auto;
+}
+
+.size {
+  font-size: 20px;
+  margin: auto 0;
+}
+
+input {
+  width: 10vw;
+  border: 0.15em solid rgb(0, 0, 0);
+}

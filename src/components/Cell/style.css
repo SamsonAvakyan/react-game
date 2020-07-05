@@ -1,0 +1,31 @@
+.row__cell {
+  width: 9vw;
+  height: 9vh;
+  background-color: rgb(232, 232, 232);
+  border: 1px solid rgb(190, 190, 190);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(232, 232, 232);
+  font-size: 20px;
+  transition: 0.7s;
+}
+
+.row__cell:hover {
+  background-color: rgba(232, 232, 232, 0.5);
+  transition: 0.7s;
+}
+
+.row__cell:active {
+  background-color: rgb(255, 255, 255);
+}
+
+.cell_visibility {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.cell_painted {
+  background-color: rgb(13, 32, 96);
+  color: rgb(0, 0, 0);
+}

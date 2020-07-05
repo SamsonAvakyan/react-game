@@ -1,0 +1,10 @@
+.cells {
+  display: flex;
+  flex-direction: column;
+}
+
+.cells__row {
+  display: flex;
+  margin: 0 auto;
+  width: auto;
+}

@@ -25,7 +25,10 @@
   color: rgb(0, 0, 0);
 }
 
+.cell_visibility:hover {
+  background-color: rgb(255, 255, 255);
+}
 .cell_painted {
   background-color: rgb(13, 32, 96);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }

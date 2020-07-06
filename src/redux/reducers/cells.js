@@ -15,8 +15,8 @@ const cells = (state = [], action = addCells) => {
         }))
       )
     case VISIBILITY_CELL:
-      return state.map((item) =>
-        item.map((item) =>
+      return state.map((row) =>
+        row.map((item) =>
           item.id === action.id
             ? { ...item, isVisibility: !item.isVisibility }
             : item
@@ -24,11 +24,16 @@ const cells = (state = [], action = addCells) => {
       )
 
     case PAINT_CELL:
-      return state.map((item) =>
-        item.map((item, index, array) =>
-          item.num == 1 &&
-          (array[index < array.length - 1 ? index + 1 : index - 1].num == 1 ||
-            array[index ? index - 1 : index + 1].num == 1)
+      return state.map((row, indexRow) =>
+        row.map((item, index, array) =>
+          item.num === 1 &&
+          (array[index < array.length - 1 ? index + 1 : index - 1].num === 1 ||
+            array[index ? index - 1 : index + 1].num === 1 ||
+            state[indexRow - 1 > 0 ? indexRow - 1 : indexRow + 1][index].num ===
+              1 ||
+            state[indexRow < array.length - 1 ? indexRow + 1 : indexRow - 1][
+              index
+            ].num === 1)
             ? { ...item, isPainted: !item.isPainted }
             : item
         )

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-
+import PropTypes from 'prop-types'
 import Button from '@material-ui/core/Button'
+
 import PlayingField from '../redux/containers/PlayingField'
 
-const App = ({ addCells, paintCell, cells }) => {
+const App = ({ addCells, paintCell }) => {
   const [value, setValue] = useState('3')
 
   const handleSubmit = (e) => {
@@ -36,9 +37,14 @@ const App = ({ addCells, paintCell, cells }) => {
         </Button>
       </header>
 
-      <PlayingField count={value} cells={cells} />
+      <PlayingField />
     </div>
   )
+}
+
+App.propTypes = {
+  addCells: PropTypes.func.isRequired,
+  paintCell: PropTypes.func.isRequired,
 }
 
 export default App
